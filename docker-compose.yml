@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:sqlite-latest
+    restart: always
+    environment:
+      - PORT=3000
+    ports:
+      - "3003:3000"
+    volumes:
+      - umami-data:/app/prisma/migrations
+
+volumes:
+  umami-data:
