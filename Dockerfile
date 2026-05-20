@@ -1,9 +1,4 @@
-# Umami Analytics — SQLite
+# Umami Analytics — official image, SQLite by default when no MySQL env vars
 FROM ghcr.io/umami-software/umami:mysql-latest
-
-ENV PORT=3000
-ENV DATABASE_URL=file:/app/data/umami.db
-
-RUN mkdir -p /app/data
 
 EXPOSE 3000
